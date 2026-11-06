@@ -1,0 +1,107 @@
+========================================================
+GREENLEAF MEDICAL CLINIC - QUICK SERVER SETUP CHEAT-SHEET
+========================================================
+
+--------------------------------------------------------
+SERVER 1: ADMIN-SRV
+--------------------------------------------------------
+1. Static IP (Desktop > IP Configuration):
+   - IP Address:      192.168.10.2
+   - Subnet Mask:     255.255.255.192
+   - Default Gateway: 192.168.10.1
+   - DNS Server:      192.168.10.2
+
+2. DHCP Service (Services > DHCP):
+   - Service:         ON
+   - Pool Name:       serverPool
+   - Default Gateway: 192.168.10.1
+   - DNS Server:      192.168.10.2
+   - Start IP:        192.168.10.10
+   - Subnet Mask:     255.255.255.192
+   - Max Users:       50
+   - Click:           SAVE
+
+3. DNS Service (Services > DNS):
+   - Service:         ON
+   - Name:            www.greenleafclinic.org
+   - Type:            A Record
+   - Address:         192.168.10.194
+   - Click:           ADD
+
+4. FTP Service (Services > FTP):
+   - Service:         ON
+   - Username:        Bhekumusa
+   - Password:        Ntshwenya
+   - Permissions:     Check Read, Write, Rename, List
+   - Click:           ADD
+
+--------------------------------------------------------
+SERVER 2: MED-SRV
+--------------------------------------------------------
+1. Static IP (Desktop > IP Configuration):
+   - IP Address:      192.168.10.66
+   - Subnet Mask:     255.255.255.192
+   - Default Gateway: 192.168.10.65
+   - DNS Server:      192.168.10.2
+
+2. DHCP Service (Services > DHCP):
+   - Service:         ON
+   - Pool Name:       serverPool
+   - Default Gateway: 192.168.10.65
+   - DNS Server:      192.168.10.2
+   - Start IP:        192.168.10.70
+   - Subnet Mask:     255.255.255.192
+   - Max Users:       50
+   - Click:           SAVE
+
+--------------------------------------------------------
+SERVER 3: PHARM-SRV
+--------------------------------------------------------
+1. Static IP (Desktop > IP Configuration):
+   - IP Address:      192.168.10.130
+   - Subnet Mask:     255.255.255.192
+   - Default Gateway: 192.168.10.129
+   - DNS Server:      192.168.10.2
+
+2. DHCP Service (Services > DHCP):
+   - Service:         ON
+   - Pool Name:       serverPool
+   - Default Gateway: 192.168.10.129
+   - DNS Server:      192.168.10.2
+   - Start IP:        192.168.10.140
+   - Subnet Mask:     255.255.255.192
+   - Max Users:       50
+   - Click:           SAVE
+
+--------------------------------------------------------
+SERVER 4: PUBLIC-SRV
+--------------------------------------------------------
+1. Static IP (Desktop > IP Configuration):
+   - IP Address:      192.168.10.194
+   - Subnet Mask:     255.255.255.192
+   - Default Gateway: 192.168.10.193
+   - DNS Server:      192.168.10.2
+
+2. DHCP Service (Services > DHCP):
+   - Service:         ON
+   - Pool Name:       serverPool
+   - Default Gateway: 192.168.10.193
+   - DNS Server:      192.168.10.2
+   - Start IP:        192.168.10.200
+   - Subnet Mask:     255.255.255.192
+   - Max Users:       50
+   - Click:           SAVE
+
+3. Web HTTP Service (Services > HTTP):
+   - HTTP:            ON
+   - HTTPS:           ON
+   - Edit index.html: Paste HTML code from greenleaf_index.html
+   - Click:           SAVE
+
+--------------------------------------------------------
+CLIENT COMPUTERS (PCs & Laptop):
+--------------------------------------------------------
+- On all PCs: Open Desktop > IP Configuration > Click "DHCP"
+- On Laptop: Power off > Insert WPC300N wireless card > Power on > 
+             Desktop > PC Wireless > Connect to AP > Desktop > IP Configuration > Click "DHCP"
+

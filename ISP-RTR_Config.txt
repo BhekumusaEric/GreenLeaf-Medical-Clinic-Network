@@ -1,0 +1,33 @@
+! ========================================================
+! GREENLEAF MEDICAL CLINIC - ISP GATEWAY ROUTER (ISP-RTR)
+! Paste this ENTIRE block directly into ISP-RTR CLI
+! ========================================================
+enable
+configure terminal
+hostname ISP-RTR
+
+! 1. WAN Point-to-Point Link to CORE Router (DTE End)
+interface Serial0/0/0
+ description WAN-Link-to-CORE
+ ip address 192.168.20.2 255.255.255.252
+ no shutdown
+ exit
+
+! 2. Internet Facing LAN Interface (Optional ISP Test Node)
+interface GigabitEthernet0/0
+ description Internet-ISP-LAN
+ ip address 209.165.200.225 255.255.255.224
+ no shutdown
+ exit
+
+! 3. RIP Version 2 Dynamic Routing & Default Route Propagation
+router rip
+ version 2
+ no auto-summary
+ network 192.168.20.0
+ default-information originate
+ exit
+
+end
+write memory
+

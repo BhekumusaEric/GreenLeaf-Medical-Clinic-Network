@@ -1,0 +1,55 @@
+! ========================================================
+! GREENLEAF MEDICAL CLINIC - CORE ROUTER (CORE-RTR)
+! Paste this ENTIRE block directly into CORE-RTR CLI
+! ========================================================
+enable
+configure terminal
+hostname CORE-RTR
+
+! 1. Administration Subnet Gateway (VLAN/Subnet 1)
+interface GigabitEthernet0/0
+ description Admin-LAN-Gateway
+ ip address 192.168.10.1 255.255.255.192
+ no shutdown
+ exit
+
+! 2. Medical Staff Subnet Gateway (Subnet 2)
+interface GigabitEthernet0/1
+ description Medical-LAN-Gateway
+ ip address 192.168.10.65 255.255.255.192
+ no shutdown
+ exit
+
+! 3. Pharmacy Subnet Gateway (Subnet 3)
+interface GigabitEthernet0/2
+ description Pharmacy-LAN-Gateway
+ ip address 192.168.10.129 255.255.255.192
+ no shutdown
+ exit
+
+! 4. Public Patient Wi-Fi Subnet Gateway (Subnet 4)
+interface GigabitEthernet0/3
+ description Public-WiFi-LAN-Gateway
+ ip address 192.168.10.193 255.255.255.192
+ no shutdown
+ exit
+
+! 5. WAN Point-to-Point Link to ISP Router (DCE End)
+interface Serial0/0/0
+ description WAN-Link-to-ISP
+ ip address 192.168.20.1 255.255.255.252
+ clock rate 64000
+ no shutdown
+ exit
+
+! 6. RIP Version 2 Dynamic Routing Configuration
+router rip
+ version 2
+ no auto-summary
+ network 192.168.10.0
+ network 192.168.20.0
+ exit
+
+end
+write memory
+

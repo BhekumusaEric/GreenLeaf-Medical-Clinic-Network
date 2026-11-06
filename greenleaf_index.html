@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenLeaf Medical Clinic - Patient Portal</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333333;
+        }
+        header {
+            background-color: #1e7e34;
+            color: #ffffff;
+            padding: 20px 30px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #d4edda;
+        }
+        nav {
+            background-color: #155724;
+            padding: 10px 30px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 25px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .banner {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .banner h2 {
+            margin: 0 0 10px 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 18px;
+            background-color: #fafbfc;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #1e7e34;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 6px;
+        }
+        ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        .notice-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666666;
+            margin-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GreenLeaf Medical Clinic</h1>
+        <p>Providing Quality, Accessible, and Compassionate Healthcare Services</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Clinical Services</a>
+        <a href="#pharmacy">On-Site Pharmacy</a>
+        <a href="#portal">Patient Portal</a>
+        <a href="#contact">Contact & Emergency</a>
+    </nav>
+
+    <div class="container">
+        <div class="banner">
+            <h2>Welcome to GreenLeaf Patient Portal</h2>
+            <p>Access your health records, schedule specialist appointments, and refill prescriptions securely.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card" id="services">
+                <h3>Specialist Consulting</h3>
+                <ul>
+                    <li>General Practice & Family Medicine</li>
+                    <li>Pediatric & Maternal Care</li>
+                    <li>Chronic Disease Management</li>
+                    <li>Minor Surgical Procedures</li>
+                </ul>
+            </div>
+
+            <div class="card" id="pharmacy">
+                <h3>On-Site Pharmacy</h3>
+                <ul>
+                    <li>Prescription Dispensing & Medication Review</li>
+                    <li>Direct Medical Aid Claims Processing</li>
+                    <li>Chronic Medication Refill Collection</li>
+                    <li>Over-the-Counter Healthcare Advice</li>
+                </ul>
+            </div>
+
+            <div class="card" id="portal">
+                <h3>Centralised Appointment System</h3>
+                <p>Book appointments online with your specialist consultant or doctor. Real-time slot availability updated 24/7.</p>
+                <p><strong>Operating Hours:</strong><br>Mon - Fri: 07:30 - 18:00<br>Sat: 08:00 - 13:00</p>
+            </div>
+
+            <div class="card" id="contact">
+                <h3>Department of Health Reporting</h3>
+                <p>Direct electronic integration with the Department of Health portal for disease surveillance, immunisation statistics, and compliance reporting.</p>
+                <p><strong>Emergency Contact:</strong> (011) 555-0199<br><strong>Email:</strong> info@greenleafclinic.org</p>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <h4>Patient Privacy & POPIA Notice</h4>
+            <p>GreenLeaf Medical Clinic complies with the Protection of Personal Information Act (POPIA). Your health data and medical history are encrypted and strictly protected under role-based access controls. Guest Wi-Fi users cannot access internal clinical records.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GreenLeaf Medical Clinic. All rights reserved. | Powered by GreenLeaf Central Server Network</p>
+    </footer>
+
+</body>
+</html>
+
