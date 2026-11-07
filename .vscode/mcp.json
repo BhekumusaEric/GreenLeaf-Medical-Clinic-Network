@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "packet-tracer": {
+      "type": "stdio",
+      "command": "/Users/eric/.local/bin/uvx",
+      "args": ["packet-tracer-mcp", "--stdio"]
+    }
+  }
+}
