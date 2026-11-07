@@ -231,7 +231,7 @@ heading("Task 1: Physical Network and Hardware Configuration", 2)
 heading("1.1 Network Topology Design", 3)
 body("The network uses a hierarchical star topology. Each subnet has its own switch connecting the server and two PCs. All four switches connect to the Core Router, which connects to the ISP Router via a serial WAN link. The Public Wi-Fi subnet includes an Access Point for wireless connectivity.")
 body("Devices used: 2 x Cisco 2911 Routers, 4 x Cisco 2960-24TT Switches, 4 x Servers, 8 x PCs, 1 x Access Point, 1 x Laptop, 1 x Cloud (WAN).")
-insert_image(f"{SS}/real_04_topology.png", caption="Screenshot 1 — Physical Network Topology in Cisco Packet Tracer")
+insert_image(f"{SS}/01_Task1_Physical_Topology.png", caption="Screenshot 1 — Physical Network Topology in Cisco Packet Tracer")
 
 page_break()
 
@@ -288,15 +288,15 @@ insert_image(f"{SS}/07_Task4_1_FTP_User_Account.png", caption="Screenshot 7 — 
 
 heading("4.2 FTP Access from Client PC", 3)
 body("FTP connection was established from ADMIN-PC1 (192.168.10.10) to ADMIN-SRV (192.168.10.2) using the created credentials.")
-insert_image(f"{SS}/real_01_ftp_login.png", caption="Screenshot 8 — FTP Login from ADMIN-PC1 Command Prompt")
+insert_image(f"{SS}/08_Task4_2_FTP_Access.png", caption="Screenshot 8 — FTP Login from ADMIN-PC1 Command Prompt")
 
 heading("4.3 File Creation and Transfer", 3)
 body("ITCTA1.txt was created on ADMIN-PC1, uploaded to the FTP server using the PUT command, then retrieved from ADMIN-PC2 using the GET command.")
-insert_image(f"{SS}/real_02_ftp_transfer.png", caption="Screenshot 9 — FTP File Upload (put ITCTA1.txt) and Retrieval")
+insert_image(f"{SS}/09_Task4_3_File_Transfer.png", caption="Screenshot 9 — FTP File Upload (put ITCTA1.txt) and Retrieval")
 
 heading("4.4 File Rename", 3)
 body("The file asa842-k8.bin was renamed to Bhekumusa_Ntshwenya.bin on the FTP server using the RENAME command.")
-insert_image(f"{SS}/real_03_ftp_rename.png", caption="Screenshot 10 — FTP File Rename (asa842-k8.bin → Bhekumusa_Ntshwenya.bin)")
+insert_image(f"{SS}/10_Task4_4_File_Rename.png", caption="Screenshot 10 — FTP File Rename (asa842-k8.bin → Bhekumusa_Ntshwenya.bin)")
 
 page_break()
 
